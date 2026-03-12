@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/transacoes';
+const API_URL = 'https://financial-manager-7g2s.onrender.com/transacoes';
 
 function getHeaders() {
     const token = localStorage.getItem('token');

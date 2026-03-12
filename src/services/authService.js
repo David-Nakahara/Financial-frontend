@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/auth';
+const API_URL = 'https://financial-manager-7g2s.onrender.com/auth';
 
 async function register(nome, email, senha) {
     const response = await fetch(`${API_URL}/register`, {
