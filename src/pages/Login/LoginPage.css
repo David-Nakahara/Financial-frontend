@@ -1,98 +1,215 @@
+/* ── Login Page ── */
 .login-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--azul-escuro);
+  background-color: #0a1628;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(26, 86, 219, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(26, 86, 219, 0.06) 0%, transparent 45%);
+  background-attachment: fixed;
 }
 
+/* ── Card ── */
 .login-card {
-  background-color: var(--azul-card);
-  border: 1px solid var(--azul-borda);
-  border-radius: 16px;
-  padding: 40px;
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 20px;
+  padding: 48px 44px;
   width: 100%;
   max-width: 420px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
 }
 
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Logo MoneyMind ── */
 .login-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--azul-primario);
-  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  margin-bottom: 32px;
+  position: relative;
+  width: fit-content;
 }
 
+.logo-money {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #22c55e;
+  letter-spacing: -1px;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.logo-mind {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #3b82f6;
+  letter-spacing: -1px;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.logo-bulb {
+  position: relative;
+  margin-left: 4px;
+  top: -8px;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.logo-bulb-icon {
+  font-size: 1.4rem;
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
+}
+
+.logo-coin {
+  display: none; /* emoji já tem o $ dentro */
+}
+
+/* ── Título ── */
 .login-card h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #f1f5f9;
+  letter-spacing: -0.5px;
 }
 
 .login-subtitle {
-  color: var(--texto-secundario);
-  margin-bottom: 24px;
+  color: #64748b;
+  margin-bottom: 32px;
   font-size: 0.9rem;
 }
 
+/* ── Inputs ── */
 .login-input {
   width: 100%;
-  padding: 12px 16px;
-  background-color: #0a1628;
-  border: 1px solid var(--azul-borda);
-  border-radius: 8px;
-  color: #ffffff;
+  padding: 13px 16px;
+  background-color: #0d1b2e;
+  border: 1px solid #273549;
+  border-radius: 10px;
+  color: #f1f5f9;
   font-size: 0.95rem;
   outline: none;
   margin-bottom: 12px;
   box-sizing: border-box;
-  transition: border 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .login-input:focus {
-  border-color: var(--azul-primario);
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
 }
 
 .login-input::placeholder {
-  color: var(--texto-secundario);
+  color: #475569;
 }
 
+/* ── Botão ── */
 .login-btn {
   width: 100%;
-  padding: 12px;
-  background-color: var(--azul-primario);
+  padding: 13px;
+  background: linear-gradient(135deg, #1a56db, #2563eb);
   color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   margin-top: 8px;
-  transition: background 0.2s;
+  transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.3px;
 }
 
 .login-btn:hover {
-  background-color: #1648c0;
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Erro ── */
 .login-erro {
-  color: #e53e3e;
-  font-size: 0.85rem;
-  margin-bottom: 8px;
+  color: #f87171;
+  font-size: 0.83rem;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
 }
 
+/* ── Toggle ── */
 .login-toggle {
   text-align: center;
-  margin-top: 20px;
-  color: var(--texto-secundario);
-  font-size: 0.9rem;
+  margin-top: 24px;
+  color: #475569;
+  font-size: 0.88rem;
 }
 
 .login-toggle span {
-  color: var(--azul-primario);
+  color: #60a5fa;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
+  transition: color 0.2s;
 }
 
 .login-toggle span:hover {
+  color: #93c5fd;
   text-decoration: underline;
+}
+
+/* ── Senha com toggle ── */
+.senha-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.senha-wrapper .senha-input {
+  margin-bottom: 0;
+  padding-right: 50px;
+  width: 100%;
+}
+
+.btn-toggle-senha {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.btn-toggle-senha:hover {
+  opacity: 1;
+}
+
+/* ── Aviso servidor ── */
+.login-aviso-servidor {
+  font-size: 0.90rem;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  border-left: 2px solid #f59e0b;
+  padding: 6px 10px;
+  margin-top: 16px;
+  line-height: 1.5;
+  opacity: 0.8;
 }
