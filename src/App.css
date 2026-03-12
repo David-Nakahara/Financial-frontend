@@ -1,0 +1,8 @@
+body {
+  background-color: #0a1628;
+  background-image:
+    radial-gradient(ellipse at 0% 30%, rgba(26, 86, 219, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 100% 30%, rgba(26, 86, 219, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+}

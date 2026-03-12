@@ -1,0 +1,154 @@
+/* ── Dashboard Container ── */
+.dashboard-container {
+  padding: 48px 48px 56px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ── Header ── */
+.dashboard-titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #f1f5f9;
+  letter-spacing: -0.8px;
+}
+
+.dashboard-subtitulo {
+  color: #64748b;
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+/* ── Filtros ── */
+.dashboard-filtro {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.filtro-select {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+}
+
+.filtro-select:hover,
+.filtro-select:focus {
+  border-color: #1a56db;
+  background-color: #243044;
+}
+
+/* ── Cards de Resumo ── */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 16px;
+  padding: 24px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1a56db, #3b82f6);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-card:hover::before {
+  opacity: 1;
+}
+
+.card-label {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.card-valor {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1;
+}
+
+.card-valor.verde { color: #22c55e; }
+.card-valor.vermelho { color: #f87171; }
+.card-valor.branco { color: #f1f5f9; }
+.card-valor.azul { color: #60a5fa; }
+
+/* ── Gráficos ── */
+.dashboard-graficos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.grafico-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 16px;
+  padding: 32px;
+  transition: box-shadow 0.2s;
+}
+
+.grafico-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.grafico-card h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #94a3b8;
+}
+
+.sem-dados {
+  color: #475569;
+  text-align: center;
+  padding: 48px 0;
+  font-size: 0.9rem;
+}
+
+.grafico-full {
+  margin-top: 20px;
+  width: 100%;
+}

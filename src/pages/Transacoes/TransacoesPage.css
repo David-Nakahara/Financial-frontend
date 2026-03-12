@@ -1,0 +1,393 @@
+/* ── Container ── */
+.transacoes-container {
+  padding: 40px 32px;
+  height: 100%;
+}
+
+/* ── Header ── */
+.transacoes-header {
+  margin-bottom: 32px;
+}
+
+.transacoes-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.5px;
+}
+
+.transacoes-header p {
+  color: #64748b;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+/* ── Form Card ── */
+.form-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 32px;
+}
+
+.form-card h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 18px;
+  color: #94a3b8;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 140px;
+  padding: 11px 16px;
+  background-color: #0d1b2e;
+  border: 1px solid #273549;
+  border-radius: 10px;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-row input:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
+}
+
+.form-row input::placeholder {
+  color: #475569;
+}
+
+select {
+  flex: 1;
+  min-width: 140px;
+  padding: 11px 16px;
+  background-color: #0d1b2e;
+  border: 1px solid #273549;
+  border-radius: 10px;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+}
+
+select:focus {
+  border-color: #1a56db;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn-depositar {
+  padding: 11px 24px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-depositar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-sacar {
+  padding: 11px 24px;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-sacar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ── Lista de Transações ── */
+.lista-transacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transacao-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.transacao-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.transacao-card.deposito {
+  border-left: 3px solid #22c55e;
+}
+
+.transacao-card.saque {
+  border-left: 3px solid #ef4444;
+}
+
+.transacao-info h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+.transacao-descricao {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 2px 0;
+}
+
+.transacao-info span {
+  font-size: 0.78rem;
+  color: #475569;
+}
+
+/* ── Lado direito ── */
+.transacao-direita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.transacao-valor {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.transacao-card.deposito .transacao-valor {
+  color: #22c55e;
+}
+
+.transacao-card.saque .transacao-valor {
+  color: #f87171;
+}
+
+.transacao-acoes {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-editar-transacao {
+  background: transparent;
+  border: 1px solid #1a56db;
+  color: #60a5fa;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-editar-transacao:hover {
+  background: #1a56db;
+  color: white;
+}
+
+.btn-deletar-transacao {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #f87171;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-deletar-transacao:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* ── Empty State ── */
+.empty-state {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px dashed #273549;
+  border-radius: 16px;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.empty-state span {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 20px;
+  padding: 36px;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-card h2 {
+  color: #f1f5f9;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.modal-tipo {
+  color: #64748b;
+  font-size: 0.83rem;
+  margin: -10px 0 0;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-form label {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-bottom: -6px;
+}
+
+.modal-form input,
+.modal-form select {
+  background: #0d1b2e;
+  border: 1px solid #273549;
+  color: #f1f5f9;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modal-form input:focus,
+.modal-form select:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
+}
+
+.modal-acoes {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.btn-cancelar {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-cancelar:hover {
+  border-color: #94a3b8;
+  color: #f1f5f9;
+}
+
+.btn-salvar {
+  background: linear-gradient(135deg, #1a56db, #2563eb);
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-salvar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}

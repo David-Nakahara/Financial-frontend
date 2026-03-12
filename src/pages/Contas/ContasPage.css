@@ -1,0 +1,226 @@
+/* ── Container ── */
+.contas-container {
+  padding: 40px 32px;
+  border-right: 1px solid #1e293b;
+  height: 100%;
+}
+
+/* ── Header ── */
+.contas-header {
+  margin-bottom: 32px;
+}
+
+.contas-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.5px;
+}
+
+.contas-header p {
+  color: #64748b;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+/* ── Form Card ── */
+.form-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 32px;
+}
+
+.form-card h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 18px;
+  color: #94a3b8;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 160px;
+  padding: 11px 16px;
+  background-color: #0d1b2e;
+  border: 1px solid #273549;
+  border-radius: 10px;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-row input:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
+}
+
+.form-row input::placeholder {
+  color: #475569;
+}
+
+.btn-criar {
+  padding: 11px 26px;
+  background: linear-gradient(135deg, #1a56db, #2563eb);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn-criar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-criar:active {
+  transform: translateY(0);
+}
+
+/* ── Lista de Contas ── */
+.lista-contas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.conta-card {
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px solid #273549;
+  border-radius: 16px;
+  padding: 22px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.conta-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #1a56db, #3b82f6);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.conta-card:hover {
+  border-color: #1a56db;
+  transform: translateX(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.conta-card:hover::before {
+  opacity: 1;
+}
+
+.conta-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+.conta-info span {
+  font-size: 0.82rem;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.conta-saldo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #22c55e;
+  letter-spacing: -0.5px;
+}
+
+/* ── Botões de Ação ── */
+.conta-acoes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.btn-editar {
+  background: transparent;
+  border: 1px solid #1a56db;
+  color: #60a5fa;
+  padding: 6px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.83rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-editar:hover {
+  background: #1a56db;
+  color: white;
+}
+
+.btn-deletar {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #f87171;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.83rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-deletar:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* ── Estados ── */
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: #475569;
+  font-size: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #1e293b 0%, #162032 100%);
+  border: 1px dashed #273549;
+  border-radius: 16px;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.empty-state span {
+  color: #475569;
+  font-size: 0.9rem;
+}
