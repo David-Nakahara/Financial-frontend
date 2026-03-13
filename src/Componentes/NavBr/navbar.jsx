@@ -1,4 +1,4 @@
-import "./navbar.css";
+import ".//navbar.css";
 
 function Navbar({ onLogout }) {
   function handleLogout() {
@@ -8,13 +8,15 @@ function Navbar({ onLogout }) {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        💳 <span>MoneyMind</span>
-      </div>
-      <div className="navbar-links">
-  <a href="#dash">Dashboard</a>
-  <a href="#contas">Minhas Contas</a>
-  <a href="#transacoes">Transações</a>
+  <div className="navbar-brand">
+    <span className="brand-money">Money</span>
+    <span className="brand-mind">Mind</span>
+    <span className="brand-bulb">💡</span>
+  </div>
+  <div className="navbar-links">
+    <a href="#dash">Dashboard</a>
+    <a href="#contas">Minhas Contas</a>
+    <a href="#transacoes">Transações</a>
 
         
         <button className="logout-btn" onClick={handleLogout}>Sair</button>

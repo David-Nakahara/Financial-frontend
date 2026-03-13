@@ -68,3 +68,33 @@
   z-index: 999;
   box-sizing: border-box;
 }
+
+/* ── Logo MoneyMind na Navbar ── */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-money {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #22c55e;
+  letter-spacing: -0.5px;
+  font-family: 'Georgia', serif;
+}
+
+.brand-mind {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #3b82f6;
+  letter-spacing: -0.5px;
+  font-family: 'Georgia', serif;
+}
+
+.brand-bulb {
+  font-size: 1.1rem;
+  margin-left: 3px;
+  position: relative;
+  top: -6px;
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.5));
+}
