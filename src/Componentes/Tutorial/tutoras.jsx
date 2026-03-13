@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import "./FerraoTutoras.css";
 import imgBisteca from "../../assets/tutoras/Bisteca.PNG";
-import imgLeite from "../../assets/tutoras/LEITE.PNG";
-import imgPC from "../../assets/tutoras/PC.PNG";
+import imgConta from "../../assets/tutoras/conta.gif";
+import imgTransacao from "../../assets/tutoras/transacao.gif";
+import imgDashboard from "../../assets/tutoras/dashboard.gif";
+
 const PASSOS = [
   {
     icone: "🏦",
     titulo: "Bem-vindo ao MoneyMind!",
-    descricao: "Seu gestor financeiro completo. Vamos te mostrar como usar em 4 passos rápidos!",
+    descricao: "Seu gestor financeiro completo. Vamos te mostrar como usar em 3 passos rápidos!",
   imagem: imgBisteca,
     alt: "Tela do intro"
 },
@@ -15,7 +17,7 @@ const PASSOS = [
     icone: "💰",
     titulo: "Crie suas Contas",
     descricao: "Em 'Minhas Contas' você cria centros de custo como 'Empresa', 'Filial' ou 'Projeto X'. Cada conta tem seu próprio saldo.",
-    imagem: imgBisteca,
+    imagem: imgConta,
     alt: "Tela do Contas"
 },
 
@@ -23,7 +25,7 @@ const PASSOS = [
     icone: "💸",
     titulo: "Registre Transações",
      descricao: "Em 'Transações' você registra depósitos e saques. Adicione uma descrição e categoria para organizar melhor seus gastos.",
-    imagem: imgLeite,
+    imagem: imgTransacao,
     alt: "Tela do Transações"
     },
 
@@ -31,7 +33,7 @@ const PASSOS = [
     icone: "📊",
     titulo: "Acompanhe o Dashboard",
     descricao: "No Dashboard você visualiza gráficos de saldo, relatório mensal e resumo por categoria. Use os filtros de conta e período!",
-    imagem: imgPC,
+    imagem: imgDashboard,
     alt: "Tela do dashboard"
 }
 ];
